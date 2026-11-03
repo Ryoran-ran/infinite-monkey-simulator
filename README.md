@@ -20,6 +20,14 @@ npm run build       # 型検証 + 本番ビルド（dist/）
 npm run preview     # 本番ビルドのローカル確認
 ```
 
+## GitHub Pagesで遊ぶ
+
+公開用の変更は`feat/github-pages`ブランチにあります。リポジトリのSettings → PagesでSourceを「GitHub Actions」にすると、`main`または`feat/github-pages`へのpushで、テスト・ビルドに成功した内容をデプロイします。
+
+公開先は通常`https://ryoran-ran.github.io/infinite-monkey-simulator/`です。利用するGitHubのプランによっては、非公開リポジトリでPagesを有効にできません。リポジトリの公開範囲は自動では変更しません。
+
+ビルドしたHTML・JavaScript・CSS・Web Workerは相対パスで読み込むため、リポジトリ名のサブディレクトリから配信できます。`dist/`を通常の静的ホスティングに置く場合も利用できます。
+
 ## 実装した機能
 
 - 英大文字、小文字、大文字＋空白、大文字＋小文字、英数字、重複排除したカスタム文字集合。
